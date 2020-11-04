@@ -1,58 +1,88 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
+<head>
 <style>
-.btn-group button {
-  background-color: #B9B9B9; /* GREY background */
-  border: 1px solid #E20074; /* White border */
-  color: #FFFFFF; /* White text */
-  padding: 8px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #EEEEEE;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11.5px;
+}
+
+body {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  align-content: center;
+}
+
+.btn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #FFFFFF;
+  border: 1.5px solid #E20074;
+  border-radius: 0.6em;
+  color: #E20074;
+  cursor: pointer;
+  display: -webkit-box;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 2px;
+  padding: 0.7em 1.6em;
+  text-decoration: none;
   text-align: center;
-  border-radius: 5px;
-  margin: 0px 2px;
-  font-size: 12px;
-  transition-duration: 0.4s;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+  outline: 0;
 }
 
-/* unvisited link */
-a:link {
-  color: #FFFFFF;
-  text-decoration: none;
+.first {
+  -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.first:hover {
+  box-shadow: 0 0 40px 40px #E20074 inset;
 }
 
-/* visited link */
-a:visited {
-  color: #FFFFFF;
-  text-decoration: none;
+.second {
+  border-radius: 3em;
+  border-color: #1abc9c;
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(26, 188, 156, 0.6)), color-stop(5%, rgba(26, 188, 156, 0.6)), color-stop(5%, #1abc9c), color-stop(10%, #1abc9c), color-stop(10%, rgba(26, 188, 156, 0.6)), color-stop(15%, rgba(26, 188, 156, 0.6)), color-stop(15%, #1abc9c), color-stop(20%, #1abc9c), color-stop(20%, rgba(26, 188, 156, 0.6)), color-stop(25%, rgba(26, 188, 156, 0.6)), color-stop(25%, #1abc9c), color-stop(30%, #1abc9c), color-stop(30%, rgba(26, 188, 156, 0.6)), color-stop(35%, rgba(26, 188, 156, 0.6)), color-stop(35%, #1abc9c), color-stop(40%, #1abc9c), color-stop(40%, rgba(26, 188, 156, 0.6)), color-stop(45%, rgba(26, 188, 156, 0.6)), color-stop(45%, #1abc9c), color-stop(50%, #1abc9c), color-stop(50%, rgba(26, 188, 156, 0.6)), color-stop(55%, rgba(26, 188, 156, 0.6)), color-stop(55%, #1abc9c), color-stop(60%, #1abc9c), color-stop(60%, rgba(26, 188, 156, 0.6)), color-stop(65%, rgba(26, 188, 156, 0.6)), color-stop(65%, #1abc9c), color-stop(70%, #1abc9c), color-stop(70%, rgba(26, 188, 156, 0.6)), color-stop(75%, rgba(26, 188, 156, 0.6)), color-stop(75%, #1abc9c), color-stop(80%, #1abc9c), color-stop(80%, rgba(26, 188, 156, 0.6)), color-stop(85%, rgba(26, 188, 156, 0.6)), color-stop(85%, #1abc9c), color-stop(90%, #1abc9c), color-stop(90%, rgba(26, 188, 156, 0.6)), color-stop(95%, rgba(26, 188, 156, 0.6)), color-stop(95%, #1abc9c), to(#1abc9c));
+  background-image: linear-gradient(to right, rgba(26, 188, 156, 0.6), rgba(26, 188, 156, 0.6) 5%, #1abc9c 5%, #1abc9c 10%, rgba(26, 188, 156, 0.6) 10%, rgba(26, 188, 156, 0.6) 15%, #1abc9c 15%, #1abc9c 20%, rgba(26, 188, 156, 0.6) 20%, rgba(26, 188, 156, 0.6) 25%, #1abc9c 25%, #1abc9c 30%, rgba(26, 188, 156, 0.6) 30%, rgba(26, 188, 156, 0.6) 35%, #1abc9c 35%, #1abc9c 40%, rgba(26, 188, 156, 0.6) 40%, rgba(26, 188, 156, 0.6) 45%, #1abc9c 45%, #1abc9c 50%, rgba(26, 188, 156, 0.6) 50%, rgba(26, 188, 156, 0.6) 55%, #1abc9c 55%, #1abc9c 60%, rgba(26, 188, 156, 0.6) 60%, rgba(26, 188, 156, 0.6) 65%, #1abc9c 65%, #1abc9c 70%, rgba(26, 188, 156, 0.6) 70%, rgba(26, 188, 156, 0.6) 75%, #1abc9c 75%, #1abc9c 80%, rgba(26, 188, 156, 0.6) 80%, rgba(26, 188, 156, 0.6) 85%, #1abc9c 85%, #1abc9c 90%, rgba(26, 188, 156, 0.6) 90%, rgba(26, 188, 156, 0.6) 95%, #1abc9c 95%, #1abc9c 100%);
+  background-position: 0 0;
+  background-size: 100%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
 }
 
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #E20074;
-}
 </style>
+</head>
 <body>
-<div class="btn-group" style="width:100%">
-  <button style="width:17%"><a href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5e54a94801335446def1eabbbf8b4448" target="_parent">WORKFRONT INTAKE</a></button>
-  <button style="width:12%"><a href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5e26750f00a1483a9f64889aa03a9969" target="_parent">MY REQUESTS</button>
-  <button style="width:10%"><a href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5e2e45d8012132a5453fab0cb0ebe830" target="_parent">DASHBOARDS</button>
-  <button style="width:9%"><a href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5df5570201a6e9186b236d4fed70a12d" target="_parent">PROJECTS</button>
-  <button style="width:13%"><a href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5e534f9d000d3ac499dad64e403efac6" target="_parent">MY @MENTIONS</button>
-  <button style="width:15%"><a href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5d995dfd01f35eb7029b8e51b7386565" target="_parent">MY ASSIGNMENTS</button>
-  <button style="width:6%"><a href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5e522a5501a78c87d7381d368a6b83d1" target="_parent">SEARCH</button>
-  <button style="width:6%"><a href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5e5365750011017ccfe500f70be7db35" target="_parent">PEOPLE</button>
-  <button style="width:3%"><a href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5e51e0d501a50714f88ca5b6a9f4220a" target="_parent">ME</button>
-  
-</div>
-
+  <a class="btn first" href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5e54a94801335446def1eabbbf8b4448" target="_parent">WORKFRONT INTAKE</a>
+  <a class="btn first" href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5e26750f00a1483a9f64889aa03a9969" target="_parent">MY REQUESTS</a>
+  <a class="btn first" href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5e2e45d8012132a5453fab0cb0ebe830" target="_parent">DASHBOARDS</a>
+  <a class="btn first" href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5df5570201a6e9186b236d4fed70a12d" target="_parent">PROJECTS</a>
+  <a class="btn first" href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5e534f9d000d3ac499dad64e403efac6" target="_parent">MY @MENTIONS</a>
+  <a class="btn first" href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5d995dfd01f35eb7029b8e51b7386565" target="_parent">MY ASSIGNMENTS</a>
+  <a class="btn first" href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5e522a5501a78c87d7381d368a6b83d1" target="_parent">SEARCH</a>
+  <a class="btn first" href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5e5365750011017ccfe500f70be7db35" target="_parent">PEOPLE</a>
+  <a class="btn first" href="https://tmobiledm.my.workfront.com/dashboard/view?ID=5e51e0d501a50714f88ca5b6a9f4220a" target="_parent">ME</a>
 </body>
 </html>
+
